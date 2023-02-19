@@ -9,7 +9,7 @@
 
 import sys 
 
-argument = sys.argv[1]
+argument = int(sys.argv[1]) #force sur int
 
 def fibonacci(n):               #Definir la suite de Fibonacci
     if n <= 0:
@@ -19,10 +19,10 @@ def fibonacci(n):               #Definir la suite de Fibonacci
     elif n == 2:
         return [0, 1]
     else:
-        fib_sequence = [0, 1]
+        fibonacci_sequence = [0, 1]
         for i in range(2, n):
-            fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])
-        return fib_sequence
+            fibonacci_sequence.append(fibonacci_sequence[i-1] + fibonacci_sequence[i-2])
+        return fibonacci_sequence
     
 def areInt(x):                    #Verif si c'est un int()
     if isinstance(x, int):
@@ -42,8 +42,8 @@ try:
             print(result[-1])
     
     else:
-        print("-1")
+        print("pas int")
 
 except ValueError:
-    print("error")
+    print("-1")
 
