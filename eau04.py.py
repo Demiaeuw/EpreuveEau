@@ -1,14 +1,16 @@
 #Prochain nombre premier
 #Créez un programme qui affiche le premier nombre premier supérieur au nombre donné en argument.
 
-#verif argument nombre premier
-#créer une liste de nombre premier 
-#arreté la liste a la demande
-#afficher le suivant 
+#recup argument
+#definir le chiffre premier en dessous
+#prendre ce chiffre premier comme ref
+#affiché le suivant
 
+
+"""
 import sys
 
-argument = sys.argv[1]
+argument = int(sys.argv[1])
 
 
 def nombre_premier(n):          #verif argument nombre premier
@@ -27,6 +29,7 @@ def liste_premiers(n):          #créer une liste de nombre premier
     return primes
 
 
+
 try:
     argument = int(sys.argv[1])     #arreté la liste a la demande
     demand = argument + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!
@@ -37,3 +40,20 @@ try:
         print(result[-1])
 except ValueError:
     print("Entré un entier")
+
+
+"""
+
+
+#index
+
+"""
+
+index = len(liste_premiers(argument))       #index
+emplacement = index + 1
+
+try:
+    argument = int(sys.argv[1])
+
+"""
+
