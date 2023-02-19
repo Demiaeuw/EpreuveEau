@@ -39,5 +39,5 @@ try:
    
 
 except ValueError:
-    print("-1")
+    print("Entré un entier")
 

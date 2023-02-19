@@ -8,7 +8,7 @@
 
 import sys
 
-stop = sys.argv[1]
+argument = sys.argv[1]
 
 
 def nombre_premier(n):          #verif argument nombre premier
@@ -28,9 +28,12 @@ def liste_premiers(n):          #créer une liste de nombre premier
 
 
 try:
-    stop = int(sys.argv[1])     #arreté la liste a la demande
-    demand = stop + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!
+    argument = int(sys.argv[1])     #arreté la liste a la demande
+    demand = argument + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!
     result = liste_premiers(demand)
-    print(result[-1])
+    if argument < 0:
+        print("-1")
+    else:
+        print(result[-1])
 except ValueError:
-    print("-1")
+    print("Entré un entier")
