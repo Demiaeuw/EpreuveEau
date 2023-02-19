@@ -7,8 +7,11 @@
 #l'intégré dans une liste
 #gerer la demande d'argument en lien avec la liste
 
+import sys 
 
-def fibonacci(n):
+argument = sys.argv[1]
+
+def fibonacci(n):               #Definir la suite de Fibonacci
     if n <= 0:
         return []
     elif n == 1:
@@ -20,5 +23,27 @@ def fibonacci(n):
         for i in range(2, n):
             fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])
         return fib_sequence
+    
+def areInt(x):                    #Verif si c'est un int()
+    if isinstance(x, int):
+        return True
+    else:
+        return False
 
-print(fibonacci(7))
+
+try:
+    if areInt(argument):
+        demand = int(sys.argv[1]) + 1      #Demande de l'argument Pour stop la suite
+        result = fibonacci(demand)
+        
+        if int(sys.argv[1]) < 0:
+            print("-1")
+        else:
+            print(result[-1])
+    
+    else:
+        print("-1")
+
+except ValueError:
+    print("error")
+
