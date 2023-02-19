@@ -8,14 +8,17 @@
 #gerer la demande d'argument en lien avec la liste
 
 
-
-result = 0
-listeFibonacci = []
-
-def Fibonacci():
-    if result == 0:
-        result += result
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
     else:
-        result = result + result 
-    print(result)
+        fib_sequence = [0, 1]
+        for i in range(2, n):
+            fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])
+        return fib_sequence
 
+print(fibonacci(7))
