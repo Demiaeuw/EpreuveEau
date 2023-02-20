@@ -4,9 +4,9 @@
 import sys
 
 argument = sys.argv[1]
+argumentstest = sys.argv[1:]
 
-
-
+result = argument.upper()
 
 
 
@@ -16,9 +16,9 @@ argument = sys.argv[1]
 
 try:
     argument = str(sys.argv[1])
-    if len(argument) != 2:
-        print("error")
+    if len(argumentstest) != 1:
+        print("trop d'argument")
     else:
-        print(result)
+        print(argument.upper())
 except ValueError:
     print("error")
