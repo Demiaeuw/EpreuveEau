@@ -7,7 +7,7 @@
 #affiché le suivant
 
 
-"""
+
 import sys
 
 argument = int(sys.argv[1])
@@ -32,7 +32,7 @@ def liste_premiers(n):          #créer une liste de nombre premier
 
 try:
     argument = int(sys.argv[1])     #arreté la liste a la demande
-    demand = argument + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!
+    demand = argument + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!  ca ne marche pas 
     result = liste_premiers(demand)
     if argument < 0:
         print("-1")
@@ -42,10 +42,10 @@ except ValueError:
     print("Entré un entier")
 
 
-"""
 
 
-#index
+
+#index peut etre
 
 """
 
