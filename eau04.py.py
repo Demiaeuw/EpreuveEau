@@ -43,6 +43,8 @@ except ValueError:
 
 
 
+#utlisé une boucle while pour incrémenté jusqu'a arrivé a un nombre premier
+
 
 
 #index peut etre

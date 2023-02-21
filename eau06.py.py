@@ -4,7 +4,7 @@
 import sys
 
 argument = sys.argv[1]
-argumentstest = sys.argv[1:]
+argumentstest = sys.argv[1:] 
 
 result = argument.upper()
 
