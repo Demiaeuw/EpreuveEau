@@ -4,3 +4,21 @@
 
 import sys
 
+argument = sys.argv[1]
+
+def maj(chain):
+    result = ""
+
+    for c in (chain):
+        if c.isdigit():
+            print("Error")
+            return ""
+        else:
+            if " " and "\t" and "\n":
+                result += c.upper()
+            else:
+                result = c
+
+
+print(maj(argument))
+        
