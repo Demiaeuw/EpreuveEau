@@ -1,19 +1,13 @@
 #Prochain nombre premier
 #Créez un programme qui affiche le premier nombre premier supérieur au nombre donné en argument.
 
-#recup argument
-#definir le chiffre premier en dessous
-#prendre ce chiffre premier comme ref
-#affiché le suivant
 
+import sys 
 
+argument = sys.argv[1]
+result = 0
 
-import sys
-
-argument = int(sys.argv[1])
-
-
-def nombre_premier(n):          #verif argument nombre premier
+def nombre_premier(n): 
     if n <= 1:
         return False
     for i in range(2, n):
@@ -21,41 +15,12 @@ def nombre_premier(n):          #verif argument nombre premier
             return False
     return True
 
-def liste_premiers(n):          #créer une liste de nombre premier 
-    primes = []
-    for i in range(2, n):
-        if nombre_premier(i):
-            primes.append(i)
-    return primes
-
-
-
-try:
-    argument = int(sys.argv[1])     #arreté la liste a la demande
-    demand = argument + 1           #!!!!!!!!!! afficher le suivant !!!!!!!!!!!!  ca ne marche pas 
-    result = liste_premiers(demand)
-    if argument < 0:
-        print("-1")
-    else:
-        print(result[-1])
-except ValueError:
-    print("Entré un entier")
-
-
-
-#utlisé une boucle while pour incrémenté jusqu'a arrivé a un nombre premier
-
-
-
-#index peut etre
-
-"""
-
-index = len(liste_premiers(argument))       #index
-emplacement = index + 1
 
 try:
     argument = int(sys.argv[1])
-
-"""
-
+    result = argument + 1
+    while not nombre_premier(result):
+        result += 1
+    print(result)
+except ValueError:
+    print("Error")
