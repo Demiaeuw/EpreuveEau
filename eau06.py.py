@@ -1,24 +1,28 @@
 #Majuscule sur deux
 #Créez un programme qui met en majuscule une lettre sur deux d’une chaîne de caractères. Seule les lettres (A-Z, a-z) sont prises en compte.
-
-import sys
+import sys 
 
 argument = sys.argv[1]
-argumentstest = sys.argv[1:] 
 
-result = argument.upper()
+def alterne_maj_min(chaine):
+    result = ""
+    majuscule = chaine[0].isupper()
+    for i, c in enumerate(chaine):
+        if c.isdigit():
+            print("Error")
+            return ""
+        else:
+            if i == 0:
+                result += c.upper()
+                majuscule = not majuscule
+            elif c.isalpha():
+                if majuscule:
+                    result += c.upper()
+                else:
+                    result += c.lower()
+                majuscule = not majuscule
+            else:
+                result += c
+    return result
 
-
-
-
-
-
-
-try:
-    argument = str(sys.argv[1])
-    if len(argumentstest) != 1:
-        print("trop d'argument")
-    else:
-        print(argument.upper())
-except ValueError:
-    print("error")
+print(alterne_maj_min(argument))
