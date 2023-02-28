@@ -6,19 +6,18 @@ import sys
 
 argument = sys.argv[1]
 
-def maj(chain):
-    result = ""
+def capitalize_words(argument):
+    words = argument.split()
+    capitalized_words = [word.capitalize() for word in words]
+    return " ".join(capitalized_words)
 
-    for c in (chain):
-        if c.isdigit():
-            print("Error")
-            return ""
-        else:
-            if " " and "\t" and "\n":
-                result += c.upper()
-            else:
-                result = c
-
-
-print(maj(argument))
-        
+try:
+    argument = str(sys.argv[1])
+    if len(sys.argv) != 2:
+        print("error")
+        sys.exit()
+    else:
+        print(capitalize_words(argument))
+except ValueError:
+    print("Error")
+    sys.exit()
