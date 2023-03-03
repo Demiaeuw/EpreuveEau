@@ -10,7 +10,7 @@
 
 
 import sys
-"""
+
 def my_bubble_sort(array):
     n = len(array)
     
@@ -20,15 +20,16 @@ def my_bubble_sort(array):
                 array[j], array[j+1] = array[j+1], array[j]
     return array
 
-result = my_bubble_sort(sys.argv[1:])
+def is_int(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
 
-try:
-    result = int(result)
-    print(result, end="")
-except ValueError:
+if all(is_int(arg) for arg in sys.argv[1:]):
+    result = my_bubble_sort([int(arg) for arg in sys.argv[1:]])
+    print(' '.join(str(arg) for arg in result))
+else:
     print("Error")
-    
-"""
-argument = sys.argv[1:]
-argument.sort()
-print(argument, end="")
+
