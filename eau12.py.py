@@ -10,7 +10,7 @@
 
 
 import sys
-
+"""
 def my_bubble_sort(array):
     n = len(array)
     
@@ -27,3 +27,8 @@ try:
     print(result, end="")
 except ValueError:
     print("Error")
+    
+"""
+argument = sys.argv[1:]
+argument.sort()
+print(argument, end="")
