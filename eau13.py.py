@@ -9,6 +9,10 @@
 #}
 import sys 
 
+if len(sys.argv) < 2:
+    print("Error")
+    sys.exit()
+
 def selection_sort(array):
     n = len(array)
     for i in range(n):
