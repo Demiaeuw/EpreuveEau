@@ -11,6 +11,10 @@
 
 import sys
 
+if len(sys.argv) < 2:
+    print("Error")
+    sys.exit()
+
 def my_bubble_sort(array):
     n = len(array)
     
